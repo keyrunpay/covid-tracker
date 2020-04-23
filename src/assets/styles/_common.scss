@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #eff1f3;
+}
+
+.gap {
+  margin: 5px 0;
+
+  &.x2 {
+    margin: 10px 0;
+  }
+}
