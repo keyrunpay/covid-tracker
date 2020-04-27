@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import OnboardingView from "./views/Onboarding";
 import CompleteRegistrationView from "./views/CompleteRegistration";
+import HomeScreenView from "./views/HomeScreen";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         exact
         component={CompleteRegistrationView}
       />
+      <Route path="/home" exact component={HomeScreenView} />
     </Switch>
   );
 }
