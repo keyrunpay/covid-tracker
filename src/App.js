@@ -1,15 +1,18 @@
 import React from "react";
-import OnboardingSwipableViews from "./components/OnboardingSwipableViews";
+import { Switch, Route } from "react-router-dom";
+import OnboardingView from "./views/Onboarding";
+import CompleteRegistrationView from "./views/CompleteRegistration";
 
 function App() {
   return (
-    <div>
-      <OnboardingSwipableViews />
-
-      <div className="login-button-component">
-        <div className="login-btn">Login With Google</div>
-      </div>
-    </div>
+    <Switch>
+      <Route path="/" exact component={OnboardingView} />
+      <Route
+        path="/completeRegistration"
+        exact
+        component={CompleteRegistrationView}
+      />
+    </Switch>
   );
 }
 
