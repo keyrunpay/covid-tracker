@@ -81,3 +81,55 @@ section#home-screen {
   font-size: 12px;
   font-weight: 700;
 }
+
+.homescreen-stats-card {
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 10px 15px;
+
+  header {
+    .left {
+      img {
+        height: 28px;
+        margin-right: 12px;
+      }
+      .stats-of {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 900;
+      }
+      .updated {
+        font-size: 9px;
+        margin: 0;
+        color: #555555;
+      }
+    }
+    .right {
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  footer {
+    p {
+      font-style: italic;
+      font-size: 9px;
+      margin: 10px 0 0 0;
+      text-align: right;
+      color: var(--blue);
+    }
+  }
+
+  .text-btn {
+    text-align: center;
+    margin-top: 7px;
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      color: var(--blue);
+    }
+  }
+}

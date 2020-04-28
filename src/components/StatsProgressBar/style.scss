@@ -1,0 +1,30 @@
+.stats-progress-bar {
+  padding: 8px 0;
+  position: relative;
+  flex: 1;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: 12px;
+      font-weight: 700;
+      margin: 2px 0;
+    }
+  }
+
+  .bar {
+    height: 6px;
+    border-radius: 6px;
+    position: absolute;
+
+    &.full {
+      width: 100%;
+      z-index: 1;
+      background-color: #e5e5e5;
+    }
+    &.complete {
+      z-index: 2;
+    }
+  }
+}
