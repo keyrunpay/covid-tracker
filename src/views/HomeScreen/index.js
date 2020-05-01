@@ -7,13 +7,44 @@ import knowMoreImage from "../../assets/images/know_more.png";
 import flagImage from "../../assets/images/nepalFlag.png";
 import worldImage from "../../assets/images/world.png";
 import arrowBtn from "../../assets/images/arrow_btn.svg";
+import calendarIcon from "../../assets/images/calendar.svg";
+import surveyIcon from "../../assets/images/survey.svg";
+import bellIcon from "../../assets/images/bell.svg";
+import reportIcon from "../../assets/images/report.svg";
 import { colors } from "../../utils/color";
 import { AppBar, StaySafeText, IconButton } from "./components";
 import StatsProgressBar from "../../components/StatsProgressBar";
+import ButtonSheet, {
+  ButtonSheetIconButton,
+} from "../../components/ButtonSheet";
 
 export default function HomeScreenView() {
+  const [showMore, setShowMore] = React.useState(false);
+
   return (
     <section id="home-screen">
+      <ButtonSheet visible={showMore} onClose={() => setShowMore(false)}>
+        <ButtonSheetIconButton
+          text="Events"
+          color={colors.blue}
+          icon={calendarIcon}
+        />
+        <ButtonSheetIconButton
+          text="Survey"
+          color={colors.purple}
+          icon={surveyIcon}
+        />
+        <ButtonSheetIconButton
+          text="Reports"
+          color={colors.orange}
+          icon={reportIcon}
+        />
+        <ButtonSheetIconButton
+          text="Notice"
+          color={colors.blue}
+          icon={bellIcon}
+        />
+      </ButtonSheet>
       <div className="wrap">
         <AppBar name="Guest" />
         <StaySafeText />
@@ -22,7 +53,12 @@ export default function HomeScreenView() {
           <IconButton icon={phoneIcon} text="Contacts" color={colors.blue} />
           <IconButton icon={newsIcon} text="News" color={colors.orange} />
           <IconButton icon={chatIcon} text="Chat" color={colors.purple} />
-          <IconButton icon={moreIcon} text="More" color={colors.yellow} />
+          <IconButton
+            icon={moreIcon}
+            onClick={() => setShowMore(true)}
+            text="More"
+            color={colors.yellow}
+          />
         </div>
         <div className="gap x2"></div>
         <KnowMore />

@@ -1,0 +1,78 @@
+.button-sheet {
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#000, 0.5);
+    z-index: 998;
+    animation: fadeIn 0.2s ease-in-out;
+  }
+  .contents {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 999;
+    padding: 30px 0;
+    border-radius: 10px 10px 0 0;
+    animation: riseUp 0.2s ease-in-out;
+  }
+
+  @keyframes riseUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+.button-sheet-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 20px;
+
+  &:hover {
+    background-color: rgba(#000, 0.1);
+  }
+
+  .icon-text {
+    display: flex;
+    align-items: center;
+
+    .shape {
+      height: 28px;
+      width: 28px;
+      border-radius: 8px;
+      position: relative;
+      margin-right: 10px;
+      img {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    p {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
