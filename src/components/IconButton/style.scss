@@ -1,0 +1,18 @@
+.icon-btn {
+  display: inline-block;
+  .shape {
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
+    position: relative;
+  }
+  p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 3px 0;
+  }
+  img {
+    height: 20px;
+  }
+}

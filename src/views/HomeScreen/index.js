@@ -12,13 +12,14 @@ import surveyIcon from "../../assets/images/survey.svg";
 import bellIcon from "../../assets/images/bell.svg";
 import reportIcon from "../../assets/images/report.svg";
 import { colors } from "../../utils/color";
-import { AppBar, StaySafeText, IconButton } from "./components";
+import { AppBar, StaySafeText } from "./components";
 import StatsProgressBar from "../../components/StatsProgressBar";
 import ButtonSheet, {
   ButtonSheetIconButton,
 } from "../../components/ButtonSheet";
+import IconButton from "../../components/IconButton";
 
-export default function HomeScreenView() {
+export default function HomeScreenView({ history }) {
   const [showMore, setShowMore] = React.useState(false);
 
   return (
@@ -31,16 +32,19 @@ export default function HomeScreenView() {
         />
         <ButtonSheetIconButton
           text="Survey"
+          onClick={() => history.push("/survey")}
           color={colors.purple}
           icon={surveyIcon}
         />
         <ButtonSheetIconButton
           text="Reports"
+          onClick={() => history.push("/report")}
           color={colors.orange}
           icon={reportIcon}
         />
         <ButtonSheetIconButton
           text="Notice"
+          onClick={() => history.push("/notice")}
           color={colors.blue}
           icon={bellIcon}
         />
