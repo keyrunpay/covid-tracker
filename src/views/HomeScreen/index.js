@@ -56,7 +56,12 @@ export default function HomeScreenView({ history }) {
         <div className="gap x2"></div>
         <div className="flex jcsb">
           <IconButton icon={phoneIcon} text="Contacts" color={colors.blue} />
-          <IconButton icon={newsIcon} text="News" color={colors.orange} />
+          <IconButton
+            icon={newsIcon}
+            onClick={() => history.push("/news")}
+            text="News"
+            color={colors.orange}
+          />
           <IconButton icon={chatIcon} text="Chat" color={colors.purple} />
           <IconButton
             icon={moreIcon}

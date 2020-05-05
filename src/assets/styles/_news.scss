@@ -1,0 +1,39 @@
+.news-item {
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 15px;
+  margin-bottom: 15px;
+
+  .left {
+    .desc {
+      font-size: 13px;
+      margin-bottom: 0;
+    }
+  }
+
+  header {
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 4px;
+    }
+    .title {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .time {
+      font-size: 12px;
+      color: #555;
+    }
+  }
+
+  .right {
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+}

@@ -1,12 +1,11 @@
 import React from "react";
-import sImage from "../../assets/images/covid.jpg";
 import { ReactComponent as CalIcon } from "../../assets/images/calendar.svg";
 
-export default function EventItem({ organizer, time, title }) {
+export default function EventItem({ eventImage, organizer, time, title }) {
   return (
     <div className="event-item">
       <header>
-        <img src={sImage} alt="" />
+        <img src={eventImage} alt="" />
         <div className="organizer">
           <p>{organizer}</p>
         </div>

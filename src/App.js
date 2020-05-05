@@ -7,6 +7,7 @@ import SurveyView from "./views/Survey";
 import ReportView from "./views/Report";
 import NoticeView from "./views/Notice";
 import EventView from "./views/Event";
+import NewsView from "./views/News";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/report" exact component={ReportView} />
       <Route path="/notice" exact component={NoticeView} />
       <Route path="/event" exact component={EventView} />
+      <Route path="/news" exact component={NewsView} />
     </Switch>
   );
 }
