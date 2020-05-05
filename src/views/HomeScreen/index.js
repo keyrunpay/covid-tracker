@@ -27,6 +27,7 @@ export default function HomeScreenView({ history }) {
       <ButtonSheet visible={showMore} onClose={() => setShowMore(false)}>
         <ButtonSheetIconButton
           text="Events"
+          onClick={() => history.push("/event")}
           color={colors.blue}
           icon={calendarIcon}
         />

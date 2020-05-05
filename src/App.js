@@ -6,6 +6,7 @@ import HomeScreenView from "./views/HomeScreen";
 import SurveyView from "./views/Survey";
 import ReportView from "./views/Report";
 import NoticeView from "./views/Notice";
+import EventView from "./views/Event";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/survey" exact component={SurveyView} />
       <Route path="/report" exact component={ReportView} />
       <Route path="/notice" exact component={NoticeView} />
+      <Route path="/event" exact component={EventView} />
     </Switch>
   );
 }

@@ -1,0 +1,60 @@
+.event-item {
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+
+  .content {
+    .left {
+      .time {
+        font-size: 13px;
+        margin: 10px 0;
+        color: #555;
+      }
+      .title {
+        margin: 8px 0;
+        font-size: 14px;
+      }
+    }
+
+    .right {
+      padding: 20px;
+      border-radius: 4px;
+      margin-left: 10px;
+      border-left: 1px solid #ddd;
+      cursor: pointer;
+      &:hover {
+        background: rgba(#000, 0.1);
+      }
+      svg {
+        path {
+          stroke: var(--blue);
+        }
+      }
+    }
+  }
+
+  header {
+    position: relative;
+    img {
+      height: 150px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .organizer {
+      position: absolute;
+      bottom: 3px;
+      background: rgba(#000, 0.7);
+      left: 0;
+      right: 0;
+      color: #fff;
+      p {
+        padding: 10px 20px;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}
